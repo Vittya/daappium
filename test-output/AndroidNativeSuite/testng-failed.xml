@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [AndroidNativeSuite]" parallel="tests">
+  <test thread-count="2" name="Android native app test on s8(failed)" parallel="tests">
+    <parameter name="udid" value="ce10171ac14acf2004"/>
+    <parameter name="platform" value="Android 9"/>
+    <parameter name="systemPort" value="8200"/>
+    <classes>
+      <class name="pages.prl.tests.AndroidNativeParallelTests">
+        <methods>
+          <include name="testLoginAndLogout"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- pages.prl.tests.AndroidNativeParallelTests -->
+    </classes>
+  </test> <!-- Android native app test on s8(failed) -->
+</suite> <!-- Failed suite [AndroidNativeSuite] -->
