@@ -2,7 +2,6 @@ package pages.prl.scrn.droid;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import jdk.nashorn.internal.objects.annotations.Function;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -50,4 +49,21 @@ public class SimpleScreen extends GenAndroidCaseBuilder   {
              clickIt(e);
         return this;
     }
+
+    public SimpleScreen swipe_scroll(int sy,int sx,int ey, int ex,int d){
+        swipe(sy,sx,ey,ex,d);
+        return this;
+    }
+
+    public SimpleScreen scrollTO(By e, int start, int stop){
+        scroll(e,start,stop);
+        return this;
+    }
+
+    public SimpleScreen scrollTO(MobileElement e, int start, int stop){
+        scroll(e,start,stop);
+        return this;
+    }
+
+
 }

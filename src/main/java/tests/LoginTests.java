@@ -1,8 +1,7 @@
 package tests;
 
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
+import pages.web.HomePage;
 
 public class LoginTests extends BaseTest {
     @Test (priority = 0)

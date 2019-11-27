@@ -44,4 +44,9 @@ public class SimplePage extends GenWebAndroidBuilder {
         hideKey();
         return this;
     }
+
+    public SimplePage swipe_scroll(int sy,int sx,int ey, int ex,int d){
+        swipe(sy,sx,ey,ex,d);
+        return this;
+    }
 }

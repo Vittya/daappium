@@ -2,8 +2,10 @@ package pages.prl.tests;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.aspectj.weaver.ast.And;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -43,8 +45,9 @@ public class AndroidNativeParallelTests {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.UDID, udid);
         capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
-        capabilities.setCapability("appPackage", "hu.drukka.servee");
-        capabilities.setCapability("appActivity","hu.drukka.servee.ui.MainActivity");
+        capabilities.setCapability("appPackage", "hu.drukka.echosafe");
+        capabilities.setCapability("appActivity","hu.drukka.echosafe.Activities.SplashScreenActivity");
+        capabilities.setCapability("autoGrantPermissions", "true");
         capabilities.setCapability(MobileCapabilityType.ORIENTATION, "PORTRAIT");
         capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
 
@@ -58,22 +61,31 @@ public class AndroidNativeParallelTests {
     @Test
     public void testLoginAndLogout() throws InterruptedException {
 
-
         screen.toScreen()
+                .clickIt(By.id("hu.drukka.echosafe:id/skip"))
+                .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_email"),"v@a.com")
+                .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_password"),"Vv12345")
+                .clickIt(By.id("hu.drukka.echosafe:id/button_login_default"));
 
-                .clickIt(By.id("hu.drukka.servee:id/btnLogin"))
-                .typeText(screen.getElementsByClass("android.widget.EditText").get(0),"mate.mogyorosi@drukka.hu")
-                .typeText(screen.getElementsByClass("android.widget.EditText").get(1),"Asd123")
-                .clickIt(By.id("hu.drukka.servee:id/btnLogin"))
-                .clickIt(screen.getElementsById("hu.drukka.servee:id/bottom_navigation_small_container").get(1))
-                .repeatClick(2,By.id("hu.drukka.servee:id/btnPay"))
-                .justWait(50000L);
-
+        for(int i=0;i<500;i++) {
+            screen.toScreen()
+                    .clickIt(By.id("hu.drukka.echosafe:id/fab_main"))
+                    .pressButton(AndroidKey.BACK);
+            //driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+        }
 
        // JiraClient jclient = new JiraClient("viktor.harsanyi@drukka.hu","Drukka001","https://drukka.atlassian.net/jira/");
 
        // jclient.createIssue("TES",11L,"teszt MZ/X");
 
+       /* screen
+                .clickIt(screen.getElementsByClass("androidx.appcompat.widget.LinearLayoutCompat").get(1))
+                .clickIt(By.id("hu.drukka.echosafe:id/image_view_recorder"))
+                .clickIt(By.id("hu.drukka.echosafe:id/linear_layout_recorder_stop"))
+                .scrollTO(screen.getElementsByClass("android.widget.ScrollView").get(0),100,10)
+                .clickIt(By.id("hu.drukka.echosafe:id/button_create_contract_delete"))
+        ;
+        */
 
     }
 

@@ -2,13 +2,18 @@ package pages.prl.scrn.webdroid;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class GenWebAndroidBuilder {
 
@@ -44,5 +49,10 @@ public class GenWebAndroidBuilder {
 
     public void hideKey(){
         driver.hideKeyboard();
+    }
+
+    void swipe(int startY,int startX,int endY,int endX, int duration) {
+        new TouchAction(driver).press(PointOption.point(startX,startY)).waitAction(WaitOptions.waitOptions(Duration.ofMillis(duration))).moveTo(PointOption.point(endX,endY))
+                .release().perform();
     }
 }

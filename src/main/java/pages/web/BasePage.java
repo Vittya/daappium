@@ -1,4 +1,4 @@
-package pages;
+package pages.web;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +15,7 @@ public class BasePage {
         wait = new WebDriverWait(driver,15);
     }
 
-    public void waitVisibility(By elementBy) {
+    private void waitVisibility(By elementBy) {
         wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
     }
 

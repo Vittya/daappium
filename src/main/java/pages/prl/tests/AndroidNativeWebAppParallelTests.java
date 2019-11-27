@@ -1,29 +1,16 @@
 package pages.prl.tests;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 import org.testng.annotations.*;
-import pages.prl.scrn.BasePage;
-import pages.prl.scrn.FindOwnerPage;
-import pages.prl.scrn.HomePage;
-import pages.prl.scrn.MainNavigationBar;
-import pages.prl.scrn.OwnersPage;
 import pages.prl.scrn.webdroid.SimplePage;
 
-import java.io.File;
 import java.net.URL;
+
 
 public class AndroidNativeWebAppParallelTests {
 
@@ -68,66 +55,27 @@ public class AndroidNativeWebAppParallelTests {
 
     @Test
     public void testFindOwner() {
-        try {
+
             SimplePage page = new SimplePage(driver);
-            for (int i = 0; i < 100; i++) {
-                page.goToUrl("https://staging.admin.servee.me/guests")
-                        .typeText("viktor.harsanyi@drukka.hu", By.xpath("//*[@id=\"inputemail\"]"))
-                        .typeText("Drukka001", By.xpath("//*[@id=\"inputpassword\"]"))
-                        .hide()
-                        .clickIt(By.xpath("/html/body/div/div/div[1]/div[3]/div/div/div[2]/div/div/div/div/form/div[4]/div/button"))
-                        .justWait()
-                        //drawer
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        //entertainment
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[2]/span"))
-                        //activities
-                        //.clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[2]/ul/li[1]/a/span"))
-                        //events
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[2]/ul/li[2]/a/span"))
-                        //advertisments
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[2]/ul/li[3]/a/span"))
 
-
-                        //settings
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/span"))
-
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/ul/li[1]/a/span"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/ul/li[2]/a"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/ul/li[4]/a/span"))
-
-
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/ul/li[5]/a/span"))
-
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[3]/ul/li[6]/a/span"))
-
-                        //Statistics
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[4]/a/span"))
-
-
-                        //sign out
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/div[1]/div/i"))
-                        .clickIt(By.xpath("//*[@id=\"app\"]/div/div[1]/div[3]/div/header/div/div/ul/li[5]/a/span"))
-
+            for (int i = 0; i < 1000; i++) {
+                page.goToUrl("https://app.echosafe.eu/")
                 ;
+/*
+                .clickIt(By.xpath("//*[@id=\"home-index\"]/div[1]/div[1]/div/div/div/div/button"))
+                .typeText("aurel.bumsfeld@blinkenlights.nl",By.xpath("//*[@id=\"email\"]"))
+                .typeText("Aurél",By.xpath("//*[@id=\"firstname\"]"))
+                .typeText("Bumsfeld",By.xpath("//*[@id=\"lastname\"]"))
+                .typeText("0036205326666", By.xpath("//*[@id=\"phone\"]"))
+                .clickIt(By.xpath("//*[@id=\"fromWhere\"]/div[1]/label"))
+                .typeText("****TESzT****",By.xpath("//*[@id=\"notes\"]"))
+                .clickIt(By.xpath("//*[@id=\"ContactUsFormForm\"]/fieldset/div[7]/div/div/label"))
+                ;//.clickIt(By.xpath("//*[@id=\"ContactUsFormForm\"]/fieldset/div[8]/button"));
+
+ */
 
             }
-        }catch (Exception e){
-            driver.startLogcatBroadcast();
-            File dir = new File("C:\\Users\\ideig");
-            File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-
-        }
 
     }
 
@@ -138,12 +86,6 @@ public class AndroidNativeWebAppParallelTests {
         }
     }
 
-    private BasePage launchHomePage() {
-        HomePage homePage = new HomePage(driver);
-        driver.get(homePage.getPageUrl());
-        homePage.waitForUrlToBeLoaded();
-        return homePage;
-    }
 
 }
 
