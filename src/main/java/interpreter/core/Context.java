@@ -57,10 +57,7 @@ class Context {
         whereFilter = filter;
     }
 
-    /**
-     * Clears the context to defaults.
-     * No filters, match all columns.
-     */
+
     void clear() {
         column = "";
         columnMapper = matchAllColumns;
@@ -84,10 +81,6 @@ class Context {
         return result;
     }
 
-    /**
-     * Sets column mapper based on {@link #column} attribute.
-     * Note: If column is unknown, will remain to look for all columns.
-     */
     private void setColumnMapper() {
         switch (column) {
             case "*":

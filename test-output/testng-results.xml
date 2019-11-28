@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="AndroidNativeSuite" duration-ms="27711" started-at="2019-11-05T12:22:31 CET" finished-at="2019-11-05T12:22:58 CET">
+  <suite name="WebAppSuite" duration-ms="47299" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:14 CET">
     <groups>
     </groups>
-    <test name="Android native app test on Pixel" duration-ms="23959" started-at="2019-11-05T12:22:31 CET" finished-at="2019-11-05T12:22:54 CET">
-      <class name="pages.prl.tests.AndroidNativeParallelTests">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@5649fd9b]" name="setup" is-config="true" duration-ms="11839" started-at="2019-11-05T12:22:31 CET" finished-at="2019-11-05T12:22:42 CET">
+    <test name="Web app test on Pixel" duration-ms="13406" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:39:40 CET">
+      <class name="pages.prl.tests.AndroidNativeWebAppParallelTests">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="setup" is-config="true" duration-ms="13374" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:39:40 CET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Android 8.0]]>
+                <![CDATA[Android 9]]>
               </value>
             </param>
             <param index="1">
@@ -21,26 +21,223 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[8201]]>
+                <![CDATA[9516]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Users\\ideig\\driverChrome\\chromedriver.exe]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:96)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 33 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testLoginAndLogout()[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@5649fd9b]" name="testLoginAndLogout" duration-ms="11388" started-at="2019-11-05T12:22:42 CET" finished-at="2019-11-05T12:22:54 CET">
+        <test-method status="SKIP" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="testFindOwner" duration-ms="0" started-at="2019-11-28T12:39:40 CET" finished-at="2019-11-28T12:39:40 CET">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:208)
+at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:217)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
+at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:37)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
+at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:96)
+at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
+at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:57)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:340)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:294)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:623)
+at org.testng.TestRunner.beforeRun(TestRunner.java:613)
+at org.testng.TestRunner.run(TestRunner.java:584)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.reflect.InvocationTargetException
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:186)
+... 33 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
+    at getResponseForW3CError (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\errors.js:826:9)
+    at asyncHandler (C:\Users\ideig\AppData\Local\Programs\Appium\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\protocol\protocol.js:388:37)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+at java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:464)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+... 38 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAndLogout -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@5649fd9b]" name="teardown" is-config="true" duration-ms="702" started-at="2019-11-05T12:22:54 CET" finished-at="2019-11-05T12:22:54 CET">
+        </test-method> <!-- testFindOwner -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="teardown" is-config="true" duration-ms="0" started-at="2019-11-28T12:39:40 CET" finished-at="2019-11-28T12:39:40 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- pages.prl.tests.AndroidNativeParallelTests -->
-    </test> <!-- Android native app test on Pixel -->
-    <test name="Android native app test on s8" duration-ms="27711" started-at="2019-11-05T12:22:31 CET" finished-at="2019-11-05T12:22:58 CET">
-      <class name="pages.prl.tests.AndroidNativeParallelTests">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@553f17c]" name="setup" is-config="true" duration-ms="13388" started-at="2019-11-05T12:22:31 CET" finished-at="2019-11-05T12:22:44 CET">
+      </class> <!-- pages.prl.tests.AndroidNativeWebAppParallelTests -->
+    </test> <!-- Web app test on Pixel -->
+    <test name="Web app test on s8" duration-ms="47299" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:14 CET">
+      <class name="pages.prl.tests.AndroidNativeWebAppParallelTests">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="setup" is-config="true" duration-ms="36298" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:03 CET">
           <params>
             <param index="0">
               <value>
@@ -54,92 +251,27 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[8200]]>
+                <![CDATA[9515]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[C:\\Users\\ideig\\driverChrome\\chromedriver.exe]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="testLoginAndLogout()[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@553f17c]" name="testLoginAndLogout" duration-ms="13565" started-at="2019-11-05T12:22:44 CET" finished-at="2019-11-05T12:22:57 CET">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[Cached elements 'By.id: hu.drukka.servee:id/btnPay' do not exist in DOM anymore
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: hu.drukka.servee.ui.MainAct..., appPackage: hu.drukka.servee, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: hu.drukka.servee.ui.MainAct..., appPackage: hu.drukka.servee, automationName: uiautomator2, deviceName: Android Emulator, noReset: false, orientation: PORTRAIT, platformName: android, platformVersion: 9, systemPort: 8200, udid: ce10171ac14acf2004}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G950F, deviceName: ce10171ac14acf2004, deviceScreenDensity: 640, deviceScreenSize: 1440x2960, deviceUDID: ce10171ac14acf2004, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, orientation: PORTRAIT, pixelRatio: 4, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 96, systemPort: 8200, takesScreenshot: true, udid: ce10171ac14acf2004, viewportRect: {height: 2672, left: 0, top: 96, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 54231252-3225-4b63-a9f7-8ccbe00a8be8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: Cached elements 'By.id: hu.drukka.servee:id/btnPay' do not exist in DOM anymore
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-0OM00FO', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities {appActivity: hu.drukka.servee.ui.MainAct..., appPackage: hu.drukka.servee, automationName: uiautomator2, databaseEnabled: false, desired: {appActivity: hu.drukka.servee.ui.MainAct..., appPackage: hu.drukka.servee, automationName: uiautomator2, deviceName: Android Emulator, noReset: false, orientation: PORTRAIT, platformName: android, platformVersion: 9, systemPort: 8200, udid: ce10171ac14acf2004}, deviceApiLevel: 28, deviceManufacturer: samsung, deviceModel: SM-G950F, deviceName: ce10171ac14acf2004, deviceScreenDensity: 640, deviceScreenSize: 1440x2960, deviceUDID: ce10171ac14acf2004, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, noReset: false, orientation: PORTRAIT, pixelRatio: 4, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 96, systemPort: 8200, takesScreenshot: true, udid: ce10171ac14acf2004, viewportRect: {height: 2672, left: 0, top: 96, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 54231252-3225-4b63-a9f7-8ccbe00a8be8
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at io.appium.java_client.DefaultGenericMobileElement.execute(DefaultGenericMobileElement.java:45)
-at io.appium.java_client.MobileElement.execute(MobileElement.java:1)
-at io.appium.java_client.android.AndroidElement.execute(AndroidElement.java:1)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:233)
-at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:228)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-at pages.prl.scrn.droid.GenAndroidCaseBuilder.waitFor(GenAndroidCaseBuilder.java:28)
-at pages.prl.scrn.droid.GenAndroidCaseBuilder.clickEvent(GenAndroidCaseBuilder.java:40)
-at pages.prl.scrn.droid.SimpleScreen.clickIt(SimpleScreen.java:22)
-at pages.prl.scrn.droid.SimpleScreen.repeatClick(SimpleScreen.java:50)
-at pages.prl.tests.AndroidNativeParallelTests.testLoginAndLogout(AndroidNativeParallelTests.java:69)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(ArrayList.java:1257)
-at org.testng.TestRunner.privateRun(TestRunner.java:770)
-at org.testng.TestRunner.run(TestRunner.java:591)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
-at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-at java.lang.Thread.run(Thread.java:748)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+        <test-method status="PASS" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="testFindOwner" duration-ms="10256" started-at="2019-11-28T12:40:03 CET" finished-at="2019-11-28T12:40:13 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginAndLogout -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeParallelTests@553f17c]" name="teardown" is-config="true" duration-ms="744" started-at="2019-11-05T12:22:57 CET" finished-at="2019-11-05T12:22:58 CET">
+        </test-method> <!-- testFindOwner -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="teardown" is-config="true" duration-ms="735" started-at="2019-11-28T12:40:13 CET" finished-at="2019-11-28T12:40:14 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- pages.prl.tests.AndroidNativeParallelTests -->
-    </test> <!-- Android native app test on s8 -->
-  </suite> <!-- AndroidNativeSuite -->
+      </class> <!-- pages.prl.tests.AndroidNativeWebAppParallelTests -->
+    </test> <!-- Web app test on s8 -->
+  </suite> <!-- WebAppSuite -->
 </testng-results>

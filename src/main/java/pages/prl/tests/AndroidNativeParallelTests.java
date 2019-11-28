@@ -61,12 +61,13 @@ public class AndroidNativeParallelTests {
     @Test
     public void testLoginAndLogout() throws InterruptedException {
 
-        screen.toScreen()
+      screen.toScreen()
                 .clickIt(By.id("hu.drukka.echosafe:id/skip"))
                 .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_email"),"v@a.com")
                 .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_password"),"Vv12345")
                 .clickIt(By.id("hu.drukka.echosafe:id/button_login_default"));
-
+        /*
+        */
         for(int i=0;i<500;i++) {
             screen.toScreen()
                     .clickIt(By.id("hu.drukka.echosafe:id/fab_main"))

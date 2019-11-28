@@ -1,5 +1,6 @@
 package pages.prl.tests;
 
+import interpreter.parser.ScannerByLine;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -8,8 +9,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.*;
 import pages.prl.scrn.webdroid.SimplePage;
+import util.Filter;
+import util.MethodCallAggregator;
 
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.util.HashMap;
 
 
 public class AndroidNativeWebAppParallelTests {
@@ -54,14 +59,26 @@ public class AndroidNativeWebAppParallelTests {
     }
 
     @Test
-    public void testFindOwner() {
+    public void testFindOwner() throws InvocationTargetException, IllegalAccessException {
 
             SimplePage page = new SimplePage(driver);
 
-            for (int i = 0; i < 1000; i++) {
+        MethodCallAggregator methodCallAggregator = new MethodCallAggregator();
+
+        //ScannerByLine scn = new ScannerByLine(Filter.finder("C:\\Users\\ideig\\Documents")[0]);
+
+        HashMap<String,String> map = new HashMap<>();
+
+        methodCallAggregator.reflectiveListInitializer(page,"goToUrl",String.class);
+        methodCallAggregator.invokeMethodList(page,"https://app.echosafe.eu/");
+
+
+/*
+
+for (int i = 0; i < 1000; i++) {
+
                 page.goToUrl("https://app.echosafe.eu/")
                 ;
-/*
                 .clickIt(By.xpath("//*[@id=\"home-index\"]/div[1]/div[1]/div/div/div/div/button"))
                 .typeText("aurel.bumsfeld@blinkenlights.nl",By.xpath("//*[@id=\"email\"]"))
                 .typeText("Aurél",By.xpath("//*[@id=\"firstname\"]"))
@@ -74,7 +91,7 @@ public class AndroidNativeWebAppParallelTests {
 
  */
 
-            }
+
 
 
     }

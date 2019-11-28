@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="GalenSuite" verbose="1" parallel="tests" thread-count="2">
+    <test name="Galen Test">
+
+
+        <parameter name="chromeDriverPort" value="9516"/>
+        <parameter name="chromeDriverPath" value="C:\\Users\\ideig\\driverChrome\\chromedriver.exe"/>
+        <classes>
+            <class name="galen.SimpleGalen" />
+        </classes>
+    </test>
+
+</suite>
