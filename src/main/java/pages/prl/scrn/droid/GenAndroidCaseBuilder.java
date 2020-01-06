@@ -33,6 +33,8 @@ public void waitFor(By element){
     wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(element));
 }
 
+public void waitForEnabled(By element){wait.until(ExpectedConditions.elementToBeClickable(element));}
+
 public void justWait(Long time){
    driver.manage().timeouts().implicitlyWait(time,TimeUnit.SECONDS);
 }

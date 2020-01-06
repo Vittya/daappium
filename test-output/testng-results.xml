@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="WebAppSuite" duration-ms="47299" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:14 CET">
+  <suite name="WebAppSuite" duration-ms="73490" started-at="2020-01-06T10:26:17 CET" finished-at="2020-01-06T10:27:30 CET">
     <groups>
     </groups>
-    <test name="Web app test on Pixel" duration-ms="13406" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:39:40 CET">
+    <test name="Web app test on Pixel" duration-ms="1188" started-at="2020-01-06T10:26:17 CET" finished-at="2020-01-06T10:26:18 CET">
       <class name="pages.prl.tests.AndroidNativeWebAppParallelTests">
-        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="setup" is-config="true" duration-ms="13374" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:39:40 CET">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@5ae9a829]" name="setup" is-config="true" duration-ms="1156" started-at="2020-01-06T10:26:17 CET" finished-at="2020-01-06T10:26:18 CET">
           <params>
             <param index="0">
               <value>
@@ -70,7 +70,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileD
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:96)
 at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
-at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:57)
+at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:60)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -129,7 +129,7 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="testFindOwner" duration-ms="0" started-at="2019-11-28T12:39:40 CET" finished-at="2019-11-28T12:39:40 CET">
+        <test-method status="SKIP" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@5ae9a829]" name="testFindOwner" duration-ms="0" started-at="2020-01-06T10:26:18 CET" finished-at="2020-01-06T10:26:18 CET">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Unable to create a new remote session. Please check the server log for more details. Original error: An unknown server-side error occurred while processing the command. Original error: Device emulator-5554 was not in the list of connected devices
@@ -170,7 +170,7 @@ at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileD
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:86)
 at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:96)
 at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:94)
-at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:57)
+at pages.prl.tests.AndroidNativeWebAppParallelTests.setup(AndroidNativeWebAppParallelTests.java:60)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -229,15 +229,15 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindOwner -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@6a024a67]" name="teardown" is-config="true" duration-ms="0" started-at="2019-11-28T12:39:40 CET" finished-at="2019-11-28T12:39:40 CET">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@5ae9a829]" name="teardown" is-config="true" duration-ms="1" started-at="2020-01-06T10:26:18 CET" finished-at="2020-01-06T10:26:18 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- pages.prl.tests.AndroidNativeWebAppParallelTests -->
     </test> <!-- Web app test on Pixel -->
-    <test name="Web app test on s8" duration-ms="47299" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:14 CET">
+    <test name="Web app test on s8" duration-ms="73490" started-at="2020-01-06T10:26:17 CET" finished-at="2020-01-06T10:27:30 CET">
       <class name="pages.prl.tests.AndroidNativeWebAppParallelTests">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="setup" is-config="true" duration-ms="36298" started-at="2019-11-28T12:39:27 CET" finished-at="2019-11-28T12:40:03 CET">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@28feb3fa]" name="setup" is-config="true" duration-ms="17723" started-at="2020-01-06T10:26:17 CET" finished-at="2020-01-06T10:26:34 CET">
           <params>
             <param index="0">
               <value>
@@ -263,11 +263,11 @@ at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="testFindOwner" duration-ms="10256" started-at="2019-11-28T12:40:03 CET" finished-at="2019-11-28T12:40:13 CET">
+        <test-method status="PASS" signature="testFindOwner()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@28feb3fa]" name="testFindOwner" duration-ms="54894" started-at="2020-01-06T10:26:34 CET" finished-at="2020-01-06T10:27:29 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testFindOwner -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@4520ebad]" name="teardown" is-config="true" duration-ms="735" started-at="2019-11-28T12:40:13 CET" finished-at="2019-11-28T12:40:14 CET">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:pages.prl.tests.AndroidNativeWebAppParallelTests@28feb3fa]" name="teardown" is-config="true" duration-ms="867" started-at="2020-01-06T10:27:29 CET" finished-at="2020-01-06T10:27:30 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -2,6 +2,7 @@ package pages.prl.scrn.droid;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
 import org.openqa.selenium.By;
 
 import java.util.List;
@@ -19,6 +20,11 @@ public class SimpleScreen extends GenAndroidCaseBuilder   {
 
     public SimpleScreen clickIt(By element){
         clickEvent(element);
+        return this;
+    }
+
+    public SimpleScreen waitForClickable(By element){
+        waitForEnabled(element);
         return this;
     }
 
@@ -62,6 +68,11 @@ public class SimpleScreen extends GenAndroidCaseBuilder   {
 
     public SimpleScreen scrollTO(MobileElement e, int start, int stop){
         scroll(e,start,stop);
+        return this;
+    }
+
+    public SimpleScreen press(AndroidKey key){
+        pressButton(key);
         return this;
     }
 

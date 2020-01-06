@@ -10,15 +10,19 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class Context {
+public class Context {
 
     private static Map<String, List<Row>> tables = new HashMap<>();
 
-    static {
+    public void fillUp(HashMap<String,String> map) {
         List<Row> list = new ArrayList<>();
-        list.add(new Row("John", "Doe"));
-        list.add(new Row("Jan", "Kowalski"));
-        list.add(new Row("Dominic", "Doom"));
+
+        map.forEach((key,value)->{
+            list.add(new Row(key,value));
+        });
+        //list.add(new Row("John", "Doe"));
+        //list.add(new Row("Jan", "Kowalski"));
+        //list.add(new Row("Dominic", "Doom"));
 
         tables.put("people", list);
     }
@@ -26,21 +30,12 @@ class Context {
     private String table;
     private String column;
 
-    /**
-     * Index of column to be shown in result.
-     * Calculated in {@link #setColumnMapper()}
-     */
+
     private int colIndex = -1;
 
-    /**
-     * Default setup, used for clearing the context for next queries.
-     * See {@link Context#clear()}
-     */
     private static final Predicate<String> matchAnyString = s -> s.length() > 0;
     private static final Function<String, Stream<? extends String>> matchAllColumns = Stream::of;
-    /**
-     * Varies based on setup in subclasses of {@link Expression}
-     */
+
     private Predicate<String> whereFilter = matchAnyString;
     private Function<String, Stream<? extends String>> columnMapper = matchAllColumns;
 

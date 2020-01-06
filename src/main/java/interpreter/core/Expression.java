@@ -2,6 +2,6 @@ package interpreter.core;
 
 import java.util.List;
 
-interface Expression {
+public interface Expression {
     List<String> interpret(Context ctx);
 }

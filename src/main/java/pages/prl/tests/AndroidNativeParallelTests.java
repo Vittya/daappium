@@ -44,9 +44,11 @@ public class AndroidNativeParallelTests {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, platformInfo[1]);
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.UDID, udid);
+        capabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        capabilities.setCapability(MobileCapabilityType.FULL_RESET,false);
         capabilities.setCapability(AndroidMobileCapabilityType.SYSTEM_PORT, systemPort);
-        capabilities.setCapability("appPackage", "hu.drukka.echosafe");
-        capabilities.setCapability("appActivity","hu.drukka.echosafe.Activities.SplashScreenActivity");
+        capabilities.setCapability("appPackage", "hu.playsic.android");
+        capabilities.setCapability("appActivity","hu.drukka.playsic.view.activity.MainActivity");
         capabilities.setCapability("autoGrantPermissions", "true");
         capabilities.setCapability(MobileCapabilityType.ORIENTATION, "PORTRAIT");
         capabilities.setCapability(MobileCapabilityType.NO_RESET, false);
@@ -60,34 +62,28 @@ public class AndroidNativeParallelTests {
 
     @Test
     public void testLoginAndLogout() throws InterruptedException {
-
+ /*
       screen.toScreen()
                 .clickIt(By.id("hu.drukka.echosafe:id/skip"))
                 .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_email"),"v@a.com")
                 .typeText(By.id("hu.drukka.echosafe:id/edit_text_login_password"),"Vv12345")
                 .clickIt(By.id("hu.drukka.echosafe:id/button_login_default"));
-        /*
-        */
+
+
         for(int i=0;i<500;i++) {
             screen.toScreen()
                     .clickIt(By.id("hu.drukka.echosafe:id/fab_main"))
                     .pressButton(AndroidKey.BACK);
             //driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
         }
-
-       // JiraClient jclient = new JiraClient("viktor.harsanyi@drukka.hu","Drukka001","https://drukka.atlassian.net/jira/");
-
-       // jclient.createIssue("TES",11L,"teszt MZ/X");
-
-       /* screen
-                .clickIt(screen.getElementsByClass("androidx.appcompat.widget.LinearLayoutCompat").get(1))
-                .clickIt(By.id("hu.drukka.echosafe:id/image_view_recorder"))
-                .clickIt(By.id("hu.drukka.echosafe:id/linear_layout_recorder_stop"))
-                .scrollTO(screen.getElementsByClass("android.widget.ScrollView").get(0),100,10)
-                .clickIt(By.id("hu.drukka.echosafe:id/button_create_contract_delete"))
-        ;
-        */
-
+*/
+for(int i=0;i<1000;i++) {
+    screen.toScreen()
+            .typeText(By.id("hu.playsic.android:id/edit_text_login_email"), "chuck@drukka.hu")
+            .typeText(By.id("hu.playsic.android:id/edit_text_login_password"), "Drukka001"+i)
+            .clickIt(By.id("hu.playsic.android:id/button_login_default"))
+            .swipe_scroll(602, 0, 602, 1000, 300);
+}
     }
 
     private String getMessage() {

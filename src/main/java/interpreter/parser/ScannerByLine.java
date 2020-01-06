@@ -23,7 +23,7 @@ public class ScannerByLine {
     }
 
 
-    public final HashMap processLineByLine() throws IOException {
+    public final HashMap<String,String> processLineByLine() throws IOException {
         HashMap<String,String> map = new HashMap<>();
         try (Scanner scanner =  new Scanner(filePath, ENCODING.name())){
             while (scanner.hasNextLine()){
@@ -40,8 +40,8 @@ public class ScannerByLine {
             if (scanner.hasNext()){
                 String name = scanner.next();
                 String value = scanner.next();
-                map.put(quote(name.trim()),quote(value.trim()));
-                log("Name is : " + quote(name.trim()) + ", and Value is : " + quote(value.trim()));
+                map.put(name.trim(),value.trim());
+               log("Name is : " + quote(name.trim()) + ", and Value is : " + quote(value.trim()));
             }
             else {
                 log("Empty or invalid line. Unable to process.");
